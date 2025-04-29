@@ -140,7 +140,7 @@ export default function BookPage({ params }) {
                 </div>
                 <span className="text-gray-400 text-sm">2 weeks ago</span>
               </div>
-              <p className="text-gray-300">&quot;This book completely changed my perspective on life. The way it explores alternate realities while maintaining a deeply personal narrative is masterful. Highly recommend to anyone feeling stuck in their life."</p>
+              <p className="text-gray-300">&quot;This book completely changed my perspective on life. The way it explores alternate realities while maintaining a deeply personal narrative is masterful. Highly recommend to anyone feeling stuck in their life.&quot;</p>
             </div>
 
             {/* Another Sample Review */}
@@ -157,7 +157,7 @@ export default function BookPage({ params }) {
                 </div>
                 <span className="text-gray-400 text-sm">1 month ago</span>
               </div>
-              <p className="text-gray-300">&quot;While I enjoyed the concept, I found some parts a bit slow. That said, the ending was profoundly moving and made the journey worthwhile. Matt Haig has a unique way of blending philosophy with storytelling."</p>
+              <p className="text-gray-300">&quot;While I enjoyed the concept, I found some parts a bit slow. That said, the ending was profoundly moving and made the journey worthwhile. Matt Haig has a unique way of blending philosophy with storytelling.&quot;</p>
             </div>
           </div>
         </section>
