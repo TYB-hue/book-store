@@ -1,7 +1,6 @@
 import { bookData } from '@/data/books';
-
 import { notFound } from 'next/navigation';
-import BookDetailsClient from '../[id]/BookDetailsClient';
+import BookDetailsClient from './BookDetailsClient';
 
 export function generateStaticParams() {
   return Object.keys(bookData).map((id) => ({
@@ -10,7 +9,9 @@ export function generateStaticParams() {
 }
 
 interface BookPageProps {
-  params: { id: string };
+  params: {
+    id: string;
+  };
 }
 
 export default function BookPage({ params }: BookPageProps) {
