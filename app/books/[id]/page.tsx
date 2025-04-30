@@ -1,30 +1,29 @@
-'use client';
-
 import { bookData } from '@/data/books';
 
-import { useParams } from 'next/navigation';
-import BookDetails from './BookDetails';
+import { notFound } from 'next/navigation';
+import BookDetailsClient from '../[id]/BookDetailsClient';
 
-// 🚀 THIS is the new function you must add
 export function generateStaticParams() {
   return Object.keys(bookData).map((id) => ({
     id: id.toString(),
   }));
 }
 
-export default function BookPage() {
-  const params = useParams();
-  const id = params?.id as string;
+interface BookPageProps {
+  params: { id: string };
+}
 
-  if (!id || !bookData[parseInt(id)]) {
-    return <div>Book not found</div>;
-  }
-
+export default function BookPage({ params }: BookPageProps) {
+  const id = params.id;
   const book = bookData[parseInt(id)];
+
+  if (!book) {
+    notFound();
+  }
 
   return (
     <div>
-      <BookDetails book={book} />
+      <BookDetailsClient book={book} />
     </div>
   );
 }
