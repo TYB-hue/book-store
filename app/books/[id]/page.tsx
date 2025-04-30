@@ -1,10 +1,16 @@
 'use client';
 
+import { bookData } from '@/data/books';
 
 import { useParams } from 'next/navigation';
-import { bookData } from '@/data/books';
-import BookDetails from '../[id]/BookDetails';
+import BookDetails from './BookDetails';
 
+// 🚀 THIS is the new function you must add
+export function generateStaticParams() {
+  return Object.keys(bookData).map((id) => ({
+    id: id.toString(),
+  }));
+}
 
 export default function BookPage() {
   const params = useParams();
@@ -18,7 +24,7 @@ export default function BookPage() {
 
   return (
     <div>
-      <BookDetails book ={book} />
+      <BookDetails book={book} />
     </div>
   );
 }
