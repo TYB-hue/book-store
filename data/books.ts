@@ -1,4 +1,34 @@
-export const bookData = {
+import { Book } from '@/types/book';
+
+// interface Review {
+//   id: number;
+//   author: string;
+//   date: string;
+ 
+//   text: string;
+//   rating: number;
+// }
+
+// interface Book {
+//   id: number;
+//   title: string;
+//   author: string;
+//   price: number;
+//   cover: string;
+//   rating: number;
+//   category: string;
+//   description: string;
+//   releaseDate: string;
+//   publisher: string;
+//   pages: number;
+//   language: string;
+//   isbn: string;
+//   aboutAuthor: string;
+//   reviews: Review[];
+// }
+
+
+export const bookData: { [key: number]: Book }  = {
     1: {
       id: 1,
       title: "The Midnight Library",

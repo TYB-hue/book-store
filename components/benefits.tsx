@@ -31,7 +31,7 @@ export default function Benefits() {
     if (!container || !content) return;
 
     let animationFrameId: number;
-    let scrollSpeed = 1; // Adjust speed here (lower = slower)
+    const scrollSpeed = 1; // Adjust speed here (lower = slower)
     let isHovered = false;
 
     const handleHover = () => isHovered = true;
@@ -104,7 +104,7 @@ export default function Benefits() {
               className="min-w-[300px] md:min-w-[360px] max-w-[400px] bg-zinc-800 border border-zinc-700 rounded-2xl p-6 shadow-lg flex-shrink-0 transition-transform duration-300 hover:scale-105"
             >
               <p className="text-white/90 italic text-base leading-relaxed break-words">
-                "{t.text}"
+                &quot;{t.text}&quot;
               </p>
               <p className="mt-6 font-semibold text-purple-400 text-sm">– {t.name}</p>
             </div>

@@ -1,5 +1,5 @@
 'use client';
-import { FaBookOpen } from 'react-icons/fa';
+// import { FaBookOpen } from 'react-icons/fa';
 import Navbar from '@/components/navbar';
 import Footer from '@/components/footer';
 import Link from 'next/link';
